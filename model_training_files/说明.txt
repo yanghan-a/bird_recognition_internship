@@ -1,0 +1,3 @@
+这个目录下训练是提前修改outlier值再训练，修改值为5.5、4.4.
+训练100epoch，128batchsize，0.0001learning_rate
+采用float16进行训练
