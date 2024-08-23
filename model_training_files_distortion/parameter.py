@@ -16,7 +16,7 @@ import numpy as np
 # model_path ="./MobileNetV3_Small_bird_real_freeze.pth"
 
 # model_path = "./MobileNetV3_Small_5.5_4.4.pth"
-model_path = "./MobileNetV3_Small.pth"
+model_path = "./MobileNetV3_Small_5.5_4.4_distortion.pth"
 
 # model_path = "./MobileNetV3_Small_bird_real_distortion.pth"
 
@@ -83,7 +83,7 @@ plt.show()
 
 
 
-
+# 下面用来调整参数
 # 设置阈值 i
 # up = 5.5
 up = 5.5
