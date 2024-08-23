@@ -1,0 +1,5 @@
+3rdparty和runtime文件夹中存放了一些库文件
+
+generate_rknn_model用来将模型转为rknn格式，包含了使用rknn模型进行连板调试快速测试模型性能的python代码
+
+rknn_mobilenet中是C/C++编译可执行文件并部署的代码
