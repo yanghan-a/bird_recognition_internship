@@ -2,11 +2,27 @@
 
 该项目主要包括两大部分代码，深度学习代码以及板端部署代码。先对代码内容进行简单介绍，为了精简代码，抛弃了版本迭代过程中的其它代码，仅保留实现最终结果的代码。项目链接为[yanghan-a/bird_recognition_internship (github.com)](https://github.com/yanghan-a/bird_recognition_internship)。
 
-SOC_deployment文件夹中是模型部署相关的内容
+SOC_deployment文件夹中是板端模型部署相关的内容。
+
+original_parameters为模型预训练参数。
+
+model_training_files和model_training_files_distortion存放了训练模型的python代码
+
+data_test、data_train、data_valid为不变形的原始图形，data_distortion中仅包含了变形的测试集图像，如需使用训练集和验证集图像可直接使用脚本对data_train、data_valid处理获取。
+
+**model_modified**和**model_modified_distortion**存放了测试使用的网络模型。
+
+
+
+model_other存放了100 epoch训练的全部模型，测试使用的是第23个
+
+model_distortion_other存放了100 epoch训练的全部模型，测试使用的是第18个
 
 ## 深度学习代码
 
-网络训练代码train.py，测试集效果查看visualize.py，网络架构代码model_v3.py、model_v2.py，模型预训练参数文件，模型文件，parameter.py调整模型参数outlier值，extract_visualize.py和visualize.py用来可视化模型在测试集上的结果，训练集、验证集、测试集的数据。
+该部分代码分为两个文件夹，model_training_files和model_training_files_distortion，分别是使用正常图像训练和图像压缩变形后训练。内部文件基本相同，部分路径不同需要修改。
+
+网络训练代码train.py，网络架构代码model_v3.py、model_v2.py，模型预训练参数文件model，模型文件，parameter.py调整模型参数outlier值，extract_visualize.py和visualize.py用来可视化模型在测试集上的结果。
 
 ## 板端部署代码
 
