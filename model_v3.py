@@ -21,6 +21,8 @@ def _make_divisible(ch, divisor=8, min_ch=None):
     # Make sure that round down does not go down by more than 10%.
     if new_ch < 0.9 * ch:
         new_ch += divisor
+        
+    hello_str = 'hello world %s' % "ss"
     return new_ch
 
 
